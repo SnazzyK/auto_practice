@@ -1,10 +1,11 @@
 import time
-from os import times
+import os
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
-service = Service('C:\\Users\\valeriy.kaurov\\PycharmProjects\\auto_practice\\chromedriver.exe')
+driver_path = os.path.join(os.getcwd(), 'chromedriver.exe')
+service = Service(driver_path)
 driver = webdriver.Chrome(service=service)
 link = "https://www.wildberries.ru/"
 
